@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>V. S. N. Anjali | Senior SDET</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0f172a;
+      --secondary: #2563eb;
+      --muted: #64748b;
+      --bg-main: #f7f9fd;
+      --card: #ffffff;
+      --border: #e5eaf3;
+      --radius: 20px;
+      --shadow: 0 18px 45px rgba(15,23,42,0.1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(224,231,255,0.9), transparent 40%),
+        radial-gradient(circle at top right, rgba(219,234,254,0.9), transparent 45%),
+        linear-gradient(180deg, #eaf2ff 0%, #f7f9fd 55%, #ffffff 100%);
+      color: var(--primary);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* NAVIGATION */
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 24px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav strong {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    nav a {
+      margin-left: 22px;
+      text-decoration: none;
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    nav a:hover { color: var(--secondary); }
+
+    /* HERO */
+    header {
+      max-width: 1200px;
+      margin: auto;
+      padding: 100px 20px 140px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 70px;
+      align-items: center;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 160px;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" d="M0,192L60,186.7C120,181,240,171,360,165.3C480,160,600,160,720,176C840,192,960,224,1080,218.7C1200,213,1320,171,1380,149.3L1440,128L1440,0L0,0Z"></path></svg>') no-repeat center / cover;
+    }
+
+    .hero-content {
+      background: linear-gradient(135deg, #ffffff, #f3f6ff);
+      padding: 64px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 { font-size: 3rem; font-weight: 700; }
+
+    .subtitle {
+      margin-top: 6px;
+      font-size: 1.15rem;
+      color: var(--secondary);
+      font-weight: 500;
+    }
+
+    .hero-content p {
+      margin-top: 22px;
+      max-width: 560px;
+      color: var(--muted);
+    }
+
+    .cta {
+      margin-top: 34px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .btn.primary {
+      background: var(--secondary);
+      color: white;
+      box-shadow: 0 8px 24px rgba(37,99,235,0.35);
+    }
+
+    .btn.primary:hover { transform: translateY(-2px); }
+
+    .btn.outline {
+      background: white;
+      border: 1px solid var(--border);
+      color: var(--primary);
+    }
+
+    .btn.outline:hover { background: #f8fafc; }
+
+    .hero-image {
+      display: flex;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 380px;
+      border-radius: 24px;
+      object-fit: cover;
+      background: white;
+      box-shadow: 0 30px 70px rgba(15,23,42,0.18);
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 90px 20px;
+    }
+
+    h2 { font-size: 2rem; margin-bottom: 18px; }
+
+    .section-desc {
+      max-width: 780px;
+      color: var(--muted);
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 26px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 26px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform 0.25s ease;
+    }
+
+    .card:hover { transform: translateY(-6px); }
+
+    /* EXPERIENCE TIMELINE */
+    .timeline {
+      margin-top: 50px;
+      position: relative;
+      padding-left: 40px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 14px;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background: #dbe3f4;
+    }
+
+    .timeline-item { position: relative; margin-bottom: 50px; }
+
+    .timeline-dot {
+      position: absolute;
+      left: 6px;
+      top: 10px;
+      width: 16px;
+      height: 16px;
+      background: var(--secondary);
+      border-radius: 50%;
+    }
+
+    .timeline-content {
+      background: white;
+      padding: 28px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .timeline-content h3 { margin-bottom: 6px; }
+
+    .timeline-content span {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .timeline-content ul { margin-top: 16px; padding-left: 18px; }
+
+    .timeline-content li {
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 50px 20px;
+      color: var(--muted);
+    }
+
+    footer a { color: var(--secondary); text-decoration: none; margin: 0 8px; }
+
+    @media (max-width: 900px) {
+      header { grid-template-columns: 1fr; }
+      .hero-content { padding: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <strong>S. N. Anjali</strong>
+  <div>
+    <a href="#about">About</a>
+    <a href="#work">What I Do</a>
+    <a href="#experience">Experience</a>
+    <a href="#credentials">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header>
+  <div class="hero-content">
+    <h1>S. N. V. Anjali</h1>
+    <div class="subtitle">Senior SDET | QA Automation Engineer</div>
+    <p>Cloud-native quality engineering across API automation, CI/CD pipelines, and Kubernetes platforms.</p>
+    <div class="cta">
+      <a href="VSN_Anjali_Senior_SDET_QA_Automation.pdf" class="btn primary" download>Download Resume</a>
+      <a href="https://www.linkedin.com" class="btn outline" target="_blank">LinkedIn</a>
+      <a href="https://github.com" class="btn outline" target="_blank">GitHub</a>
+      <a href="https://www.salesforce.com/trailblazer/vanjali5" class="btn outline" target="_blank">Salesforce</a>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="profile.jpg" alt="Profile photo" />
+  </div>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p class="section-desc">
+    I am a Senior SDET with 4+ years of experience working on enterprise platforms and cloud-native systems. My strength
+    lies in building confidence in releases — not just by writing tests, but by embedding automation into CI/CD pipelines
+    and validating Kubernetes-based deployments. I enjoy working at the intersection of quality, automation, and
+    platform engineering, collaborating closely with developers and DevOps teams.
+  </p>
+</section>
+
+<section id="work">
+  <h2>What I Do</h2>
+  <div class="cards">
+    <div class="card"><h3>API & Integration Testing</h3><p>REST & GraphQL automation with strong contract validation.</p></div>
+    <div class="card"><h3>UI Automation</h3><p>Reliable UI automation using Playwright, Selenium, and Katalon.</p></div>
+    <div class="card"><h3>Mobile Automation</h3><p>Android & iOS automation using Appium and Katalon.</p></div>
+    <div class="card"><h3>CI/CD Quality Engineering</h3><p>Automation as quality gates in Jenkins, GitHub Actions, and Azure DevOps.</p></div>
+    <div class="card"><h3>Cloud-Native Validation</h3><p>Docker, Kubernetes, and Helm deployment validation.</p></div>
+    <div class="card"><h3>Enterprise Platforms</h3><p>Salesforce Sales, Service, and Marketing Cloud testing.</p></div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <p class="section-desc">
+    Over 4+ years, I have worked across enterprise and cloud‑native programs, partnering closely with developers,
+    architects, and DevOps teams to improve release confidence through scalable automation.
+  </p>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Senior SDET – GE Vernova</h3>
+        <span>Cloud‑Native Data & Analytics Platforms | 2023 – Present</span>
+        <ul>
+          <li>Worked on large‑scale, Kubernetes‑based data fabric platforms supporting enterprise analytics and BI workloads.</li>
+          <li>Designed and maintained UI automation frameworks using Selenium and Gauge for complex, role‑based workflows.</li>
+          <li>Built API automation to validate microservices, data ingestion pipelines, and integration layers.</li>
+          <li>Validated Helm‑based Kubernetes deployments including configuration overrides, readiness probes, scaling, and rollback scenarios.</li>
+          <li>Integrated automation suites as quality gates within Jenkins and GitHub Actions CI/CD pipelines.</li>
+          <li>Collaborated with DevOps teams to improve deployment stability, environment reliability, and release confidence.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Senior Automation Test Analyst – Cognizant</h3>
+        <span>Salesforce & Enterprise Applications | 2021 – 2023</span>
+        <ul>
+          <li>Led automation initiatives for Salesforce Sales Cloud, Service Cloud, and Marketing Cloud implementations.</li>
+          <li>Automated 1100+ test cases across SIT, UAT, and Production environments.</li>
+          <li>Designed and implemented BDD‑based automation frameworks using Java, Cucumber, Maven, and TestNG.</li>
+          <li>Built REST and GraphQL API automation using Rest Assured and Postman.</li>
+          <li>Implemented mobile automation for Android and iOS using Appium and Katalon.</li>
+          <li>Integrated automation execution into Jenkins pipelines to provide fast feedback to development teams.</li>
+          <li>Mentored junior engineers and established automation best practices across projects.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Automation Test Analyst – Cognizant</h3>
+        <span>E‑commerce & Enterprise Platforms | 2019 – 2021</span>
+        <ul>
+          <li>Worked on automation testing for e‑commerce platforms, Anaplan, and warehouse management systems.</li>
+          <li>Implemented UI automation using Selenium and Playwright for cross‑browser validation.</li>
+          <li>Developed API automation using Rest Assured to validate backend services.</li>
+          <li>Executed mobile automation testing to validate cross‑platform behavior and integrations.</li>
+          <li>Improved regression execution stability and reduced manual testing effort through reusable frameworks.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="credentials">
+  <h2>Certifications & Achievements</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Professional Certifications</h3>
+      <ul>
+        <li>Copado Robotic Testing</li>
+        <li>Copado Fundamentals 1 & 2</li>
+        <li>TOSCA AS1, AS2 & API Testing</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Achievements & Innovations</h3>
+      <ul>
+        <li>Awarded for rapid adoption of automation frameworks</li>
+        <li>Developed XPath Generator utility for automation efficiency</li>
+        <li>Hackathon participant – regression optimization</li>
+        <li>Designed reusable end-to-end test encapsulation frameworks</li>
+        <li>Contributed to 10+ automation utilities delivering business value</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <p>
+    <a href="mailto:your.email@example.com">Email</a> ·
+    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> ·
+    <a href="https://github.com" target="_blank">GitHub</a>
+  </p>
+  <p>© 2026 S. N. Anjali</p>
+</footer>
+
+</body>
+</html>
