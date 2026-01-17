@@ -248,9 +248,36 @@
       header { grid-template-columns: 1fr; }
       .hero-content { padding: 40px; }
     }
+
+    /* BACK TO TOP BUTTON */
+.back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  background: var(--secondary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 8px 24px rgba(37,99,235,0.4);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  z-index: 999;
+}
+
+.back-to-top:hover {
+  transform: translateY(-4px);
+}
+
   </style>
 </head>
-<body>
+<body id="top">
+
 
 <nav>
   <strong>S. N. Anjali</strong>
@@ -403,70 +430,156 @@
 <section id="experience">
   <h2>Experience</h2>
   <p class="section-desc">
-    Over 4+ years, I have worked across enterprise and cloud‑native programs, partnering closely with developers,
-    architects, and DevOps teams to improve release confidence through scalable automation.
+    Over 4+ years, I have worked across enterprise and cloud-native programs,
+    collaborating closely with developers, DevOps, and data teams to improve
+    release confidence through scalable automation and CI/CD integration.
   </p>
 
   <div class="timeline">
 
+    <!-- GE VERNOVA -->
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-content">
-        <h3>Senior SDET – GE Vernova</h3>
-        <span>Cloud‑Native Data & Analytics Platforms | 2023 – Present</span>
+        <h3>GE Vernova – Quality Assurance Engineer</h3>
+        <span>May 2025 – Present</span>
         <ul>
-          <li>Part of the Data Fabric team, contributing to an in-house federated database platform 
-supporting BI, data-view applications, and internal client solutions. </li>
-          <li>Worked on large‑scale, Kubernetes‑based data fabric platforms supporting enterprise analytics and BI workloads.</li>
-          <li>Designed and maintained UI automation frameworks using Selenium and Gauge for complex, role‑based workflows.</li>
-          <li>Built API automation to validate microservices, data ingestion pipelines, and integration layers.</li>
-          <li>Validated Helm‑based Kubernetes deployments including configuration overrides, readiness probes, scaling, and rollback scenarios.</li>
-          <li>Integrated automation suites as quality gates within Jenkins and GitHub Actions CI/CD pipelines.</li>
-          <li>Collaborated with DevOps teams to improve deployment stability, environment reliability, and release confidence.</li>
+          <li>
+            Contributed to the Data Fabric team supporting <strong>AnyBase</strong>,
+            an in-house federated database platform powering BI, data-view applications,
+            and internal client solutions.
+          </li>
+          <li>
+            Designed and maintained UI automation frameworks using
+            <strong>Gauge + Selenium (Java)</strong> for enterprise web applications.
+          </li>
+          <li>
+            Implemented performance and load testing using
+            <strong>Playwright (Java)</strong> to validate scalability and response times
+            of data services and APIs.
+          </li>
+          <li>
+            Performed API automation testing to ensure data integrity,
+            reliability, and contract compliance across federated data services.
+          </li>
+          <li>
+            Collaborated closely with DevOps teams to support
+            <strong>Helm chart upgrades</strong>, troubleshoot deployment overrides,
+            and stabilize Kubernetes-based application releases.
+          </li>
+          <li>
+            Built and maintained CI/CD pipelines using
+            <strong>Jenkins and GitHub Actions</strong> (sandbox environments)
+            to automate test execution and deployments.
+          </li>
+          <li>
+            Worked with <strong>DAAP CLI</strong> to enable creation, ingestion,
+            and management of data-as-a-product workflows.
+          </li>
+          <li>
+            Developed and executed <strong>Kubernetes jobs</strong> to ingest data
+            into Plane No Data applications, ensuring reliable orchestration and monitoring.
+          </li>
         </ul>
       </div>
     </div>
 
+    <!-- COGNIZANT – CHANEL -->
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-content">
-        <h3>Senior Automation Test Analyst – Cognizant</h3>
-        <span>Salesforce & Enterprise Applications | 2021 – 2023</span>
+        <h3>Cognizant – Senior Automation Test Analyst (Chanel Coco)</h3>
+        <span>Jul 2023 – Apr 2025</span>
         <ul>
-          <li>Led automation initiatives for Salesforce Sales Cloud, Service Cloud, and Marketing Cloud implementations.</li>
-          <li>Automated 1100+ test cases across SIT, UAT, and Production environments.</li>
-          <li>Designed and implemented BDD‑based automation frameworks using Java, Cucumber, Maven, and TestNG.</li>
-          <li>Built REST and GraphQL API automation using Rest Assured and Postman.</li>
-          <li>Implemented mobile automation for Android and iOS using Appium and Katalon.</li>
-          <li>Integrated automation execution into Jenkins pipelines to provide fast feedback to development teams.</li>
-          <li>Executed POCs for 5+ applications across Web, Salesforce, API, and Mobile platforms using 
-TOSCA and custom frameworks.</li>
-          <li>Mentored junior engineers and established automation best practices across projects.</li>
+          <li>
+            Spearheaded automation of <strong>1100+ Salesforce test cases</strong>
+            across Sales, Service, and Marketing Cloud, improving efficiency and coverage
+            across SIT, UAT, and production support.
+          </li>
+          <li>
+            Led a team of <strong>3 automation engineers</strong>, increasing automation
+            coverage by <strong>60%</strong> and reducing manual testing efforts.
+          </li>
+          <li>
+            Actively participated in grooming sessions and client calls, contributing
+            to requirement analysis and automation strategy across multiple applications.
+          </li>
+          <li>
+            Delivered detailed <strong>KT sessions</strong> to ensure seamless knowledge
+            transfer on workflows, requirements, and automation best practices.
+          </li>
+          <li>
+            Executed <strong>POCs for 5+ applications</strong> spanning web, Salesforce,
+            APIs, and mobile (iOS & Android) using <strong>TOSCA</strong>.
+          </li>
+          <li>
+            Designed BDD automation using <strong>Cucumber + Java Maven</strong>
+            frameworks for Web, API (GraphQL), and Mobile applications.
+          </li>
+          <li>
+            Forged Salesforce APIs and identified <strong>15+ critical defects</strong>
+            early, accelerating development cycles by <strong>20%</strong>.
+          </li>
+          <li>
+            Enhanced reporting and test data strategies, improving reporting accuracy
+            by <strong>30%</strong> across environments.
+          </li>
+          <li>
+            Reviewed and optimized automation scripts, improving execution efficiency
+            by <strong>25%</strong>.
+          </li>
+          <li>
+            Led defect tracking using <strong>Azure DevOps</strong>,
+            reducing defect resolution time by <strong>20%</strong>.
+          </li>
         </ul>
       </div>
     </div>
 
+    <!-- COGNIZANT – MATTEL -->
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-content">
-        <h3>Automation Test Analyst – Cognizant</h3>
-        <span>E‑commerce & Enterprise Platforms | 2019 – 2021</span>
+        <h3>Cognizant – Automation Test Analyst (Mattel)</h3>
+        <span>Jul 2021 – Jun 2023</span>
         <ul>
-          <li>Worked on automation testing for e‑commerce platforms, Anaplan, and warehouse management systems.</li>
-          <li>Implemented UI automation using Selenium and Playwright for cross‑browser validation.</li>
-          <li>Automated UI, Smoke, Regression, and API tests for a Shopify e-commerce platform using 
-Playwright (JavaScript + Jest), achieving 33% faster execution and 40% reduction in manual 
-testing. </li>
-          <li>Performed REST API automation using Rest-Assured, covering 90% of endpoints and 
-improving API reliability.</li>
-          <li>Executed mobile automation testing to validate cross‑platform behavior and integrations.</li>
-          <li>Improved regression execution stability and reduced manual testing effort through reusable frameworks.</li>
+          <li>
+            Automated UI, Smoke, Regression, and API tests for Shopify using
+            <strong>Playwright (JavaScript + Jest)</strong>, achieving
+            <strong>33% faster execution</strong> and
+            <strong>40% reduction</strong> in manual testing.
+          </li>
+          <li>
+            Validated <strong>30% of CSS properties</strong> to ensure
+            cross-browser styling accuracy.
+          </li>
+          <li>
+            Developed automation for <strong>Anaplan</strong> using Java, Selenium,
+            Maven, and TestNG, reducing testing time by <strong>20%</strong>.
+          </li>
+          <li>
+            Automated REST APIs using <strong>Rest Assured</strong>,
+            covering <strong>90% of endpoints</strong> and improving stability.
+          </li>
+          <li>
+            Built automation using <strong>Robot Framework (Python + Selenium)</strong>
+            for Salesforce CRM, achieving <strong>95% coverage</strong>.
+          </li>
+          <li>
+            Automated WMS and IBM DOM systems covering UI, database, and APIs,
+            increasing overall test coverage by <strong>25%</strong>.
+          </li>
+          <li>
+            Integrated automation pipelines with <strong>Jenkins CI/CD</strong>,
+            streamlining execution and defect tracking.
+          </li>
         </ul>
       </div>
     </div>
 
   </div>
 </section>
+
 
 <section id="credentials">
   <h2>Certifications & Achievements</h2>
@@ -529,6 +642,7 @@ improving API reliability.</li>
   </p>
   <p>© 2026 S. N. Anjali</p>
 </footer>
+<a href="#top" class="back-to-top">↑</a>
 
 </body>
 </html>
